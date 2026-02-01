@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendation System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎬 Movie Recommendation System</h1>
+
+    <form method="POST">
+        <select name="user" required>
+            <option value="">Select User</option>
+            <option value="A">User A</option>
+            <option value="B">User B</option>
+            <option value="C">User C</option>
+            <option value="D">User D</option>
+        </select>
+        <button type="submit">Get Recommendations</button>
+    </form>
+
+    {% if recommendations %}
+    <div class="result">
+        <h2>Recommended for User {{ user }}</h2>
+        <ul>
+            {% for movie in recommendations %}
+            <li>{{ movie }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

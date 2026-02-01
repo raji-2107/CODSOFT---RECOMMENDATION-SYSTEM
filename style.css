@@ -1,0 +1,67 @@
+body {
+    background-color: #cce7ff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 400px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    color: #0077cc;
+}
+
+select, button {
+    padding: 10px;
+    margin-top: 15px;
+    width: 80%;
+    font-size: 16px;
+}
+
+button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+.result {
+    margin-top: 20px;
+    animation: slideUp 1s ease;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #e6f2ff;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
